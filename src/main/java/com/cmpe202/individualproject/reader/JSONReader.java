@@ -30,7 +30,7 @@ public class JSONReader implements IReaderStrategy {
         try {
             JSONParser parser = new JSONParser();
             Object obj = parser.parse(new FileReader(filePath));
-            JSONObject jsonObject = (JSONObject) obj;
+            JSONObject jsonObject = (JSONObject) obj
             JSONArray cardsArray = (JSONArray) jsonObject.get("cards");
 
             for (Object cardObj : cardsArray) {
